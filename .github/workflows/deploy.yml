@@ -16,9 +16,11 @@ jobs:
 
             - name: Setup Node
               uses: actions/setup-node@v3
+              with:
+                  node-version: 20
 
             - name: Install dependencies
-              uses: bahmutov/npm-install@v1
+              uses: npm install
 
             - name: Build project
               run: npm run build
@@ -43,7 +45,8 @@ jobs:
                   path: ./dist
 
             - name: Deploy to GitHub Pages
-              uses: peaceiris/actions-gh-pages@v4
+              uses: JamesIves/github-pages-deploy-action@4.1.0
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./dist
+                  branch: gh-pages # The branch to deploy to
+                  folder: build
