@@ -1,7 +1,10 @@
 // MinusButton.js
 const MinusButton = ({ onClick }) => {
-    return <button onClick={onClick}>-</button>;
-  };
-  
-  export default MinusButton;
-  
+    return (
+        <button type="submit" onClick={onClick}>
+            -
+        </button>
+    );
+};
+
+export default MinusButton;

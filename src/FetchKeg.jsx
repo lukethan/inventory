@@ -1,18 +1,18 @@
-import { useState, useEffect } from 'react';
-import CardTest from './CardTest';
+import { useState, useEffect } from "react";
+import CardTest from "./CardTest";
 
 const FetchKeg = () => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch('https://kegsouth.pythonanywhere.com')
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        console.log(data);
-        setProducts(data);
-      });
-  }, []);
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        fetch("https://kegsouth.pythonanywhere.com")
+            .then((res) => {
+                return res.json();
+            })
+            .then((data) => {
+                console.log(data);
+                setProducts(data);
+            });
+    }, []);
     return (
         <div>
             {products.map((product) => (

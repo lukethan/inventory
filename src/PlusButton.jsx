@@ -1,7 +1,10 @@
 // PlusButton.js
 const PlusButton = ({ onClick }) => {
-    return <button onClick={onClick}>+</button>;
-  };
-  
-  export default PlusButton;
-  
+    return (
+        <button type="submit" onClick={onClick}>
+            +
+        </button>
+    );
+};
+
+export default PlusButton;
