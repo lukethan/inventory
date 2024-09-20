@@ -49,6 +49,7 @@ function CardAdd({ onAdd }) {
                     placeholder="Enter Amount"
                     value={amount}
                     type="number"
+                    min="0"
                     onChange={(e) => setAmount(e.target.value)}
                 ></input>
                 <button type="submit">Submit</button>

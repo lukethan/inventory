@@ -1,6 +1,10 @@
 // DeleteButton.js
 const DeleteButton = ({ onClick }) => {
-    return <button onClick={onClick}>x</button>;
+    return (
+        <button className="delete-button" onClick={onClick}>
+            x
+        </button>
+    );
 };
 
 export default DeleteButton;

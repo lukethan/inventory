@@ -80,14 +80,19 @@ const CardInventory = ({ id, item, amount, image, onDelete }) => {
 
     return (
         <div className="card">
-            <DeleteButton onClick={deleteEntry} />
+            <div className="delete-div">
+                <DeleteButton onClick={deleteEntry} />
+            </div>
             <form className="card-form" onSubmit={handleSubmit}>
                 <input type="hidden" name="item_id" value={id} />
                 <img className="card-image" src={imageSrc} alt="PlaceHolder" onClick={handleImageClick} />
                 <h2 className="card-title">{item}</h2>
-                <p className="card-text">Inventory: {count}</p>
-                <PlusButton onClick={increment} />
-                <MinusButton onClick={decrement} />
+
+                <div className="plusminus-div">
+                    <MinusButton onClick={decrement} />
+                    <p className="card-text">Inventory: {count}</p>
+                    <PlusButton onClick={increment} />
+                </div>
                 <input type="file" ref={fileInputRef} style={{ display: "none" }} accept="image/*" onChange={handleImageUpload} />
             </form>
         </div>

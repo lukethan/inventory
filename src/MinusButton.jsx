@@ -1,7 +1,7 @@
 // MinusButton.js
 const MinusButton = ({ onClick }) => {
     return (
-        <button type="submit" onClick={onClick}>
+        <button className="minus-button" type="submit" onClick={onClick}>
             -
         </button>
     );

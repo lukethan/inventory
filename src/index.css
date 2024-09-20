@@ -2,7 +2,10 @@
     border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 10px;
     margin: 5px;
     text-align: center;
     /* min-width: 135px; */
@@ -10,6 +13,7 @@
     height: 150px;
     display: inline-block;
     background-color: lightblue;
+    /* background-color: rgb(202, 178, 147); */
 }
 
 .card-add {
@@ -29,6 +33,7 @@
     padding-left: 0;
     padding-right: 0;
     margin-top: 0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card .card-title {
@@ -56,7 +61,7 @@
 .card .card-text {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    color: rgb(255, 255, 255);
+    color: yellow;
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 0.9em;
@@ -72,4 +77,37 @@ footer {
 .amount-add {
     width: 100%;
     margin-bottom: 5px;
+}
+
+.delete-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.delete-button,
+.plus-button,
+.minus-button {
+    background-color: #000000; /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 0px 5px; /* Padding inside the button */
+    font-size: 16px; /* Font size */
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    width: 22px;
+    height: 20px;
+}
+.plus-button {
+    background-color: green;
+}
+.minus-button {
+    background-color: red;
+}
+
+.plusminus-div {
+    display: flex;
+    justify-content: space-between;
+    height: 22px;
+    padding-top: 5px;
 }
