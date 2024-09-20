@@ -85,7 +85,9 @@ const CardInventory = ({ id, item, amount, image, onDelete }) => {
             </div>
             <form className="card-form" onSubmit={handleSubmit}>
                 <input type="hidden" name="item_id" value={id} />
-                <img className="card-image" src={imageSrc} alt="PlaceHolder" onClick={handleImageClick} />
+                <div className="circle">
+                    <img className="card-image" src={imageSrc} alt="Image of Inventory" onClick={handleImageClick} />
+                </div>
                 <h2 className="card-title">{item}</h2>
 
                 <div className="plusminus-div">

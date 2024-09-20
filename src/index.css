@@ -2,7 +2,7 @@
     border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-    padding-bottom: 20px;
+    padding-bottom: 35px;
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 10px;
@@ -23,17 +23,28 @@
     height: 100%;
     justify-content: space-between;
 }
+.circle {
+    width: 100px; /* Set the diameter of the circle */
+    height: 100px; /* Set the diameter of the circle */
+    border-radius: 50%; /* This makes it a circle */
+    overflow: hidden; /* Hide any overflow from the image */
+    display: inline-block; /* Center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; Center vertically
+}
 .card .card-image {
-    max-width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    margin-bottom: 5px;
+    width: auto; /* Maintain aspect ratio */
+    height: 100%; /* Fill the height of the circle */
+    max-width: none;
+    /* border-radius: 50%; */
+    /* margin-bottom: 5px;
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
-    margin-top: 0;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 0; */
+    /* align-self: center;  */
+    /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); */
 }
 
 .card .card-title {
@@ -97,12 +108,16 @@ footer {
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
     width: 22px;
     height: 20px;
+    align-items: center;
+    padding-bottom: 2px;
 }
 .plus-button {
     background-color: green;
+    padding-bottom: 0px;
 }
 .minus-button {
     background-color: red;
+    padding-bottom: 5px;
 }
 
 .plusminus-div {
@@ -110,4 +125,5 @@ footer {
     justify-content: space-between;
     height: 22px;
     padding-top: 5px;
+    align-items: center;
 }
