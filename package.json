@@ -1,5 +1,6 @@
 {
   "name": "keg-react",
+  "homepage": "https://lukethan.github.io/inventory",
   "private": true,
   "version": "0.0.0",
   "type": "module",
