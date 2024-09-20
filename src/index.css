@@ -5,37 +5,71 @@
     padding: 20px;
     margin: 5px;
     text-align: center;
-    max-width: 250px;
+    /* min-width: 135px; */
+    width: 135px;
+    height: 150px;
     display: inline-block;
     background-color: lightblue;
 }
 
+.card-add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
 .card .card-image {
-    max-width: 150px;
-    height: 150px;
+    max-width: 75px;
+    height: 75px;
     border-radius: 50%;
     margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
 }
 
 .card .card-title {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     color: yellow;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.card .card-new {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: yellow;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 15px;
+    margin-top: 10px;
 }
 
 .card .card-text {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     color: rgb(255, 255, 255);
-    margin-top: 10px;
-}
-
-.card .card-submit {
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 0.9em;
 }
 
 footer {
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
     /* Optional padding */
+}
+
+.card .item-add,
+.amount-add {
+    width: 100%;
+    margin-bottom: 5px;
 }

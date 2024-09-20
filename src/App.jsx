@@ -1,42 +1,22 @@
-import Card from "./Card";
-import Inventory from "./Inventory";
-import CardTest from "./CardTest";
-import kegPic from "./assets/kegsouth.jpg";
+// import Card from "./Card";
+// import Inventory from "./Inventory";
+// import CardInventory from "./CardInventory";
+import CardAdd from "./CardAdd";
+// import kegPic from "./assets/kegsouth.jpg";
 import FetchKeg from "./FetchKeg";
 import Footer from "./Footer";
+import { useState } from "react";
 
 function App() {
-    const productData = [
-        {
-            image: "https://placehold.co/400?text=Placeholder+Image",
-            item: "Coors",
-            amount: 5,
-        },
-        {
-            image: "https://placehold.co/400?text=Placeholder+Image",
-            item: "Heineken",
-            amount: 1,
-        },
-        {
-            image: "https://placehold.co/400?text=Placeholder+Image",
-            item: "Budweiser",
-            amount: 10,
-        },
-        {
-            image: "https://placehold.co/400?text=Placeholder+Image",
-            item: "Corona",
-            amount: 3,
-        },
-        {
-            image: "https://placehold.co/400?text=Placeholder+Image",
-            item: "Space Dust",
-            amount: 2,
-        },
-    ];
+    const [products, setProducts] = useState([]);
+    const handleAdd = (newProduct) => {
+        setProducts((prevProducts) => [...prevProducts, newProduct]);
+    };
 
     return (
         <>
-            <FetchKeg />
+            <FetchKeg products={products} />
+            <CardAdd onAdd={handleAdd} />
             <Footer />
         </>
     );
