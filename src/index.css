@@ -1,3 +1,14 @@
+body {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#root {
+    width: 100%;
+}
+
 .card {
     border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
@@ -23,28 +34,27 @@
     height: 100%;
     justify-content: space-between;
 }
+
 .circle {
-    width: 100px; /* Set the diameter of the circle */
-    height: 100px; /* Set the diameter of the circle */
-    border-radius: 50%; /* This makes it a circle */
-    overflow: hidden; /* Hide any overflow from the image */
-    display: inline-block; /* Center the image */
-    justify-content: center; /* Center horizontally */
-    align-items: center; Center vertically
+    width: 100px;
+    /* Set the diameter of the circle */
+    height: 100px;
+    /* Set the diameter of the circle */
+    border-radius: 50%;
+    /* This makes it a circle */
+    overflow: hidden;
+    /* Hide any overflow from the image */
+    display: inline-block;
+    /* Center the image */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
 }
+
 .card .card-image {
-    width: auto; /* Maintain aspect ratio */
-    height: 100%; /* Fill the height of the circle */
+    width: auto;
+    height: 100%;
     max-width: none;
-    /* border-radius: 50%; */
-    /* margin-bottom: 5px;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: 0; */
-    /* align-self: center;  */
-    /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); */
 }
 
 .card .card-title {
@@ -95,26 +105,45 @@ footer {
     align-items: flex-start;
     justify-content: flex-end;
 }
+
 .delete-button,
 .plus-button,
 .minus-button {
-    background-color: #000000; /* Red background */
-    color: white; /* White text */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 0px 5px; /* Padding inside the button */
-    font-size: 16px; /* Font size */
+    background-color: #000000;
+    /* Red background */
+    color: white;
+    /* White text */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners */
+    padding: 0px 5px;
+    /* Padding inside the button */
+    font-size: 16px;
+    /* Font size */
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
     width: 22px;
     height: 20px;
     align-items: center;
+    padding-bottom: 1.25px;
+}
+.submit-button {
+    width: auto;
+    text-align: center;
+    align-items: center;
+    padding-top: 3px;
     padding-bottom: 2px;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
 }
 .plus-button {
     background-color: green;
     padding-bottom: 0px;
 }
+
 .minus-button {
     background-color: red;
     padding-bottom: 5px;
@@ -126,4 +155,8 @@ footer {
     height: 22px;
     padding-top: 5px;
     align-items: center;
+}
+
+Footer {
+    font-size: 0.5em;
 }

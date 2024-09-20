@@ -1,5 +1,5 @@
 import CardAdd from "./CardAdd";
-
+import Header from "./Header";
 import FetchKeg from "./FetchKeg";
 import Footer from "./Footer";
 import { useState } from "react";
@@ -12,6 +12,7 @@ function App() {
 
     return (
         <>
+            <Header />
             <FetchKeg products={products} />
             <CardAdd onAdd={handleAdd} />
             <Footer />

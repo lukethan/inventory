@@ -52,7 +52,9 @@ function CardAdd({ onAdd }) {
                     min="0"
                     onChange={(e) => setAmount(e.target.value)}
                 ></input>
-                <button type="submit">Submit</button>
+                <button className="submit-button" type="submit">
+                    Submit
+                </button>
             </form>
         </div>
     );
