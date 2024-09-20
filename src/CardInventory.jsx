@@ -27,19 +27,6 @@ const CardInventory = ({ id, item, amount, image, onDelete }) => {
         }
     };
 
-    // const deleteEntry = async () => {
-    //     const encodedItemName = encodeURIComponent(props.item);
-    //     const response = await fetch(`https://kegsouth.pythonanywhere.com/${encodedItemName}`, {
-    //         method: "DELETE",
-    //     });
-    //     if (response.ok) {
-    //         console.log("Successfully deleted:", await response.json());
-    //         window.location.reload();
-    //     } else {
-    //         console.error("Deletion failed:", response.statusText);
-    //     }
-    // };
-
     const handleImageClick = () => {
         if (fileInputRef.current) {
             fileInputRef.current.click(); // Trigger the file input click
@@ -63,7 +50,7 @@ const CardInventory = ({ id, item, amount, image, onDelete }) => {
 
         if (response.ok) {
             const data = await response.json(); // Get the response from the server
-            setImage(data.imageUrl); // Assuming the server responds with the image path
+            setImageSrc(data.imageUrl); // Assuming the server responds with the image path
             console.log("Image uploaded successfully");
         } else {
             console.error("Upload failed:", response.statusText);

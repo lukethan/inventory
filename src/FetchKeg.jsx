@@ -3,7 +3,7 @@ import CardInventory from "./CardInventory";
 import CardAdd from "./CardAdd";
 
 const FetchKeg = ({ products }) => {
-    const [fetchedProducts, setFetchedProducts] = useState([products]);
+    const [fetchedProducts, setFetchedProducts] = useState([]);
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -30,7 +30,7 @@ const FetchKeg = ({ products }) => {
 
         if (response.ok) {
             console.log("Response received:", await response.json());
-            setProducts((prevProducts) => {
+            setFetchedProducts((prevProducts) => {
                 const updatedProducts = prevProducts.filter((product) => product.item !== itemToDelete);
                 return updatedProducts;
             });
@@ -39,9 +39,9 @@ const FetchKeg = ({ products }) => {
         }
     };
 
-    const handleAdd = (newProduct) => {
-        setProducts((prevProducts) => [...prevProducts, newProduct]);
-    };
+    // const handleAdd = (newProduct) => {
+    //     setProducts((prevProducts) => [...prevProducts, newProduct]);
+    // };
 
     // const handleAdd = async (newProduct) => {
     //     const response = await fetch("https://kegsouth.pythonanywhere.com/", {
