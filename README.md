@@ -1,4 +1,4 @@
-# Keg South Inventory Webapp Frontend
+# 'Keg South Inventory' Webapp Frontend
 "inventory" is a React application hosted on GitHub Pages that is served by a Flask backend via RESTful APIs.
 
 ## Relevant Links
