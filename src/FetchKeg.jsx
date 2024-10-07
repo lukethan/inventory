@@ -4,6 +4,7 @@ import CardAdd from "./CardAdd";
 
 const FetchKeg = ({ products }) => {
     const [fetchedProducts, setFetchedProducts] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -17,11 +18,16 @@ const FetchKeg = ({ products }) => {
                 setFetchedProducts(data);
             } catch (error) {
                 console.error("Failed to fetch products:", error);
+            } finally {
+                setIsLoading(false);
             }
         };
 
+        //     fetchProducts();
+        // }, [products]);
+
         fetchProducts();
-    }, [products]);
+    }, []);
 
     const handleDelete = async (itemToDelete) => {
         const response = await fetch(`https://kegsouth.pythonanywhere.com/${encodeURIComponent(itemToDelete)}`, {
